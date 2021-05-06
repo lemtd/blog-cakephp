@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+    web:
+        image: webdevops/php-apache:7.3
+        container_name: web-phpApache
+        volumes:
+            - ./:/app
+        ports:
+            - "8089:80"
+        depends_on:
+            - db
+        networks:
+            - rmv
+
+    db:
+        image: postgres:12.6
+        container_name: db-postgres
+        volumes:
+            - ./pgdata:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_PASSWORD=postgres
+        networks:
+            - rmv
+
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: db-pgadmin
+        ports:
+            - "5712:80"
+        environment:
+            PGADMIN_DEFAULT_EMAIL: "leticia.deodato@beyondtecnologia.com.br"
+            PGADMIN_DEFAULT_PASSWORD: "Deodato@123!"
+        depends_on:
+            - db
+        networks:
+            - rmv
+            
+networks: 
+    rmv:
+        driver: bridge
