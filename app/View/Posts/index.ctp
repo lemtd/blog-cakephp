@@ -1,8 +1,12 @@
-<h1>Blog posts</h1>
-<p><?php echo $this->Html->link('Register', array('action' => '../Users/add')); ?></p>
-<p><?php echo $this->Html->link('Login', array('action' => '../Users/login')); ?></p>
-<p><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
-<p><?php echo $this->Html->link('Logout', array('action' => '../Users/logout')); ?></p>
+<h1>Blog do CakePHP</h1>
+<header>
+    <ul id="menu">
+        <li><?php echo $this->Html->link('Register', array('action' => '../Users/add')); ?></li>
+        <li><?php echo $this->Html->link('Login', array('action' => '../Users/login')); ?></li>
+        <li><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></li>
+        <li><?php echo $this->Html->link('Logout', array('action' => '../Users/logout')); ?></li>
+    </ul>
+</header>
 <table>
     <tr>
         <th>Id</th>
