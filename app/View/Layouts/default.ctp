@@ -19,11 +19,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
 <html>
+<?php echo $this->element('head'); ?>
 <body>
 	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'https://cakephp.org'); ?></h1>
-		</div>
+		<header>
+			<div id="logo">
+				<!-- redirecionar pra pagina atual -->
+				<a href="https://www.google.com"><?php echo $this->Html->image('lupa.png', array('alt' => 'Imagem de busca', 'width' => '60px', 'position' => 'absolute', 'margin-top' => '5px', 'margin-left' => '40px')); ?></a>
+			</div>
+			<?php
+				echo $this->Html->div('titulo', 'Blog com CakePHP');
+			?>
+		</header>
+
 		<div id="content">
 
 			<?php echo $this->Flash->render(); ?>
@@ -43,5 +51,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+	<?php echo $this->element('footer'); ?>
 </body>
 </html>
