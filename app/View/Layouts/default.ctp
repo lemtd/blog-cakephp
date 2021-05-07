@@ -25,7 +25,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<header>
 			<div id="logo">
 				<!-- redirecionar pra pagina atual -->
-				<a href="https://www.google.com"><?php echo $this->Html->image('lupa.png', array('alt' => 'Imagem de busca', 'width' => '60px', 'position' => 'absolute', 'margin-top' => '5px', 'margin-left' => '200px')); ?></a>
+				<a href="https://www.google.com"><?php echo $this->Html->image('lupa.png', array('alt' => 'Imagem de busca', 'width' => '60px', 'padding' => '200px')); ?></a>
 			</div>
 		</header>
 
