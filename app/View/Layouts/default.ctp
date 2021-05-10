@@ -22,13 +22,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <?php echo $this->element('head'); ?>
 <body>
 	<div id="container">
-		<header>
-			<div id="logo">
-				<!-- redirecionar pra pagina atual -->
-				<a href="https://www.google.com"><?php echo $this->Html->image('lupa.png', array('alt' => 'Imagem de busca', 'width' => '60px', 'padding' => '200px')); ?></a>
-			</div>
-		</header>
-
 		<div id="content">
 
 			<?php echo $this->Flash->render(); ?>

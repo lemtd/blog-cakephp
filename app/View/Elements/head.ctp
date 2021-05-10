@@ -5,11 +5,11 @@
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css('bootstrap');
-		echo $this->Html->css('style.css');
+		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('estilo');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->Html->script('bootstrap');
-		echo $this->Html->script('jquery-3.6.0');
+		echo $this->Html->script('jquery.min');
+		echo $this->Html->script('bootstrap.min');
 	?>
 </head>
