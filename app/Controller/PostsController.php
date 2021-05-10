@@ -56,5 +56,12 @@
             }
             return false;
         }
+
+        public function some_function() {
+            $allArticles = $this->Article->find('all');
+            $pending = $this->Article->find('all', array('conditions' => array('Article.status' => 'pending')));
+            $allAuthors = $this->Article->User->find('all');
+            $allPublishedAuthors = $this->Article->User->find('all', array('conditions' => array('Article.status !=' => 'pending')));
+        }
     }
 ?>

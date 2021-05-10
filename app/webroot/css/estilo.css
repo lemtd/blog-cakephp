@@ -52,6 +52,11 @@ tr, th, td {
     text-align: center;
 }
 
-#forms {
+.forms_buttom, .forms_post {
+    margin-left: 380px;
+}
+
+.forms_blog {
     margin-top: 200px;
+    margin-left: 20px;
 }

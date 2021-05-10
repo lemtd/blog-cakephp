@@ -8,16 +8,15 @@
     </ul>
 </header>
 
-<form id="forms" class="container">
-  <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search">
-    <div class="input-group-btn">
-      <button class="btn btn-default" type="submit">
-          Submit
-      </button>
-    </div>
-  </div>
-</form><br><br>
+<?php echo $this->Form->create('properties', array('type' => 'POST', 'class' => 'forms_post')); 
+echo $this->Form->input('Search', array(
+    'lable' => false,
+    'value' => 'oie',
+    'class' => 'forms_blog'
+));
+echo $this->Form->button('Submit', array('class' => 'botao', 'class' => 'forms_button'));
+echo $this->Form->end();
+?><br><br>
 
 <table class="container" id="table_container">
     <tr>
@@ -39,3 +38,4 @@
         </tr>
     <?php endforeach; ?>
 </table>
+
