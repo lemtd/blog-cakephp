@@ -5,6 +5,11 @@
 
         function index() {
             $this->set('posts', $this->Post->find('all'));
+            $search = $this->request->data('Properties.Search');
+            if(isset($search)){
+                $conditions = array("OR" => array("Post.title ILIKE" => '%'.$search.'%', "Post.body ILIKE" => '%'.$search.'%'));
+                $this->set('posts', $this->Post->find('all', compact('conditions')));
+            }
         }
 
         public function view($id = null) {
@@ -55,13 +60,6 @@
                 }
             }
             return false;
-        }
-
-        public function some_function() {
-            $allArticles = $this->Article->find('all');
-            $pending = $this->Article->find('all', array('conditions' => array('Article.status' => 'pending')));
-            $allAuthors = $this->Article->User->find('all');
-            $allPublishedAuthors = $this->Article->User->find('all', array('conditions' => array('Article.status !=' => 'pending')));
         }
     }
 ?>

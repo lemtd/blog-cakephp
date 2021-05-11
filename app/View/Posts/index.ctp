@@ -8,17 +8,21 @@
     </ul>
 </header>
 
-<?php echo $this->Form->create('properties', array('type' => 'POST', 'class' => 'forms_post')); 
-echo $this->Form->input('Search', array(
-    'lable' => false,
-    'value' => 'oie',
-    'class' => 'forms_blog'
-));
-echo $this->Form->button('Submit', array('class' => 'botao', 'class' => 'forms_button'));
-echo $this->Form->end();
-?><br><br>
+
 
 <table class="container" id="table_container">
+    <?php
+    echo $this->Form->create('Properties', array('type' => 'post'));
+    echo $this->Form->input('Search', array(
+        'between'=>'<label for="search" class="main_search"></label><br>',
+        "placeholder" => "Search",
+        'label'=>false
+    ));
+    echo $this->Form->button('Submit', array('class'=>'btn btn-primary'));
+    echo $this->Form->end();
+    ?>
+    <br><br>
+
     <tr>
         <th id="title_table">Title</th>
         <th id="action_table">Action</th>

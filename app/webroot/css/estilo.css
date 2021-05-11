@@ -49,14 +49,11 @@ tr, th, td {
 }
 
 #action_table, #title_table {
+    margin-top: 200px;
     text-align: center;
 }
 
-.forms_buttom, .forms_post {
-    margin-left: 380px;
-}
-
-.forms_blog {
+.forms_post{
     margin-top: 200px;
     margin-left: 20px;
 }
