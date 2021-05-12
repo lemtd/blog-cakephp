@@ -1,29 +1,32 @@
-<h2>Blog do CakePHP</h2>
-<header>
-    <ul id="menu">
-        <li><?php echo $this->Html->link('Register', array('action' => '../Users/add')); ?></li>
-        <li><?php echo $this->Html->link('Login', array('action' => '../Users/login')); ?></li>
-        <li><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></li>
-        <li><?php echo $this->Html->link('Logout', array('action' => '../Users/logout')); ?></li>
-    </ul>
-</header>
 <div class="container">
     <table class="table table-hover" id="table_container">
-        <?php
-            echo $this->Form->create('Properties', array('type' => 'post'));
+
+    <nav class="navbar navbar-light bg-light">
+        <?php echo $this->Form->create('Properties', array('type' => 'post', 'class' => 'form-inline'));
             echo $this->Form->input('Search', array(
                 'between'=>'<label for="search" class="main_search"></label><br>',
                 "placeholder" => "Search",
-                'label'=>false
+                'label'=>false,
+                'class' => 'form-control mr-sm-2',
+                'type' => 'search',
+                'aria-label' => 'Search'
             ));
-            echo $this->Form->button('Submit', array('class'=>'btn btn-primary'));
+        ?>
+        <br>
+        <?php echo $this->Form->button('Submit', array(
+                'class'=>'btn btn-outline-success my-2 my-sm-0',
+                'type' => 'submit'
+            ));
             echo $this->Form->end();
         ?>
-        <br><br>
+    </nav>
+    <br><br>
 
         <tr>
             <th id="title_table">Title</th>
-            <th id="action_table">Action</th>
+            <?php if ($this->Session->read('Auth.User')) { ?>
+                <th id="action_table">Action</th>
+            <?php } ?>
         </tr>
 
         <?php $i = 0; foreach ($posts as $post): ?>
@@ -34,10 +37,12 @@
                         <?php echo $post['Post']['body']; ?>
                     </div> 
                 </td>
-                <td>
-                    <?php echo $this->Form->postLink('Edit', array('action' => 'edit', $post['Post']['id'])); ?>
-                    <?php echo $this->Form->postLink('Delete', array('action' => 'delete', $post['Post']['id']),  array('confirm' => 'Are you sure?')); ?>
-                </td>
+                <?php if ($this->Session->read('Auth.User')) { ?>
+                    <td>
+                        <?php echo $this->Form->postLink('Edit', array('action' => 'edit', $post['Post']['id'])); ?>
+                        <?php echo $this->Form->postLink('Delete', array('action' => 'delete', $post['Post']['id']),  array('confirm' => 'Are you sure?')); ?>
+                    </td>
+                <?php } ?>
             </tr>
         <?php endforeach; ?>
     </table>
