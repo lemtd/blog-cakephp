@@ -25,7 +25,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
 				<li><?php echo $this->Html->link('Home', array('action' => '../Posts/index', 'class' => 'active')); ?></li>
-				<?php if ($this->Session->read('Auth.User') && $this->Session->read('Auth.User')) { ?>
+				<?php if ($this->Session->read('Auth.User')) { ?>
 					<li><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></li>
 					<li><?php echo $this->Html->link('Logout', array('action' => '../Users/logout')); ?></li>
 				<?php } else { ?>
