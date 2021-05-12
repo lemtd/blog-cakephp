@@ -37,7 +37,7 @@
                         <?php echo $post['Post']['body']; ?>
                     </div> 
                 </td>
-                <?php if ($this->Session->read('Auth.User')) { ?>
+                <?php if ($this->Session->read('Auth.User') && $this->Session->write('Auth.User')) { ?>
                     <td>
                         <?php echo $this->Form->postLink('Edit', array('action' => 'edit', $post['Post']['id'])); ?>
                         <?php echo $this->Form->postLink('Delete', array('action' => 'delete', $post['Post']['id']),  array('confirm' => 'Are you sure?')); ?>
