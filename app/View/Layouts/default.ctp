@@ -21,7 +21,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html>
 <?php echo $this->element('head'); ?>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default" id="menu">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
 				<li><?php echo $this->Html->link('Home', array('action' => '../Posts/index', 'class' => 'active')); ?></li>

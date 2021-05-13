@@ -4,5 +4,5 @@
     <?php echo $this->Form->input('title'); ?><br>
     <?php echo $this->Form->input('body', array('rows' => '3')); ?><br>
     <?php echo $this->Form->end('Save Post'); ?><br><br>
-    <?php echo $this->Form->button('Voltar', array('action' => 'index')); ?>
+    <?php echo $this->Html->link('Back', array('action' => '../Posts/index')); ?>
 </div>

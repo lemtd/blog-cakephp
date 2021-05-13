@@ -1,4 +1,13 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
 #index {
-    background-color: rgb(189, 189, 189);
-    margin-top: 100px;
+    background-color: rgb(135, 177, 255);
+    margin-top: 75px;
+}
+
+#menu {
+    background-color: rgb(173, 216, 255);
+    font-weight: 600;
 }

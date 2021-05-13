@@ -46,7 +46,6 @@
                     </div> 
                 </td>
                 <td>
-                    <?php $titulo = $post['Post']['title']; ?>
                     <?php if($post['Post']['status'] == TRUE) { ?>
                         <?php echo 'Abled'; ?>
                     <?php } else if($post['Post']['status'] == FALSE) { ?>
