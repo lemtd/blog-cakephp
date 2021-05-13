@@ -6,7 +6,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('bootstrap');
-		//echo $this->Html->css('estilo');
+		echo $this->Html->css('estilizando');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->Html->script('jquery.min');
