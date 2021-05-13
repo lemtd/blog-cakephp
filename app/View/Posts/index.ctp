@@ -13,6 +13,13 @@
             ));
         ?>
         <br>
+        <?php echo $this->Form->input('Filter', array(
+                'options' => array('Disabled', 'Abled'),
+                'empty' => 'All',
+                'label' => false
+            )); 
+        ?>
+        <br>
         <?php echo $this->Form->button('Submit', array(
                 'class'=>'btn btn-outline-success my-2 my-sm-0',
                 'type' => 'submit'
@@ -24,6 +31,7 @@
 
         <tr>
             <th id="title_table">Title</th>
+            <th id="action_table">Status</th>
             <?php if ($this->Session->read('Auth.User')) { ?>
                 <th id="action_table">Action</th>
             <?php } ?>
@@ -36,6 +44,14 @@
                     <div id="demo-<?php echo $i; $i++; ?>" class="collapse">
                         <?php echo $post['Post']['body']; ?>
                     </div> 
+                </td>
+                <td>
+                    <?php $titulo = $post['Post']['title']; ?>
+                    <?php if($post['Post']['status'] == TRUE) { ?>
+                        <?php echo 'Abled'; ?>
+                    <?php } else if($post['Post']['status'] == FALSE) { ?>
+                        <?php echo 'Disabled'; ?>
+                    <?php } ?>
                 </td>
                 <?php if ($this->Session->read('Auth.User')) { ?>
                     <td>

@@ -3,6 +3,6 @@
     <?php echo $this->Form->create('Post');?>
     <?php echo $this->Form->input('title'); ?><br>
     <?php echo $this->Form->input('body', array('rows' => '3')); ?><br>
-    <?php echo $this->Form->end('Save Post');
-    echo $this->Html->link('Voltar', array('action' => 'index')); ?>
+    <?php echo $this->Form->end('Save Post'); ?><br><br>
+    <?php echo $this->Form->button('Voltar', array('action' => 'index')); ?>
 </div>

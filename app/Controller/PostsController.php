@@ -6,8 +6,12 @@
         function index() {
             $this->set('posts', $this->Post->find('all'));
             $search = $this->request->data('Properties.Search');
-            if(isset($search)){
+            $filter = $this->request->data('Properties.Filter');
+            if($filter == NULL){
                 $conditions = array("OR" => array("Post.title ILIKE" => '%'.$search.'%', "Post.body ILIKE" => '%'.$search.'%'));
+                $this->set('posts', $this->Post->find('all', compact('conditions')));
+            } else {
+                $conditions = array("OR" => array("Post.title ILIKE" => '%'.$search.'%', "Post.body ILIKE" => '%'.$search.'%'), "AND" => array("Post.status" => $filter));
                 $this->set('posts', $this->Post->find('all', compact('conditions')));
             }
         }
