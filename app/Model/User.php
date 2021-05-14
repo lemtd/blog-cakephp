@@ -4,14 +4,12 @@
         public $validate = array(
             'username' => array(
                 'required' => array(
-                    'on' => 'create',
                     'rule' => 'notBlank',
                     'message' => 'A username is required'
                 )
             ),
             'password' => array(
                 'required' => array(
-                    'on' => 'create',
                     'rule' => 'notBlank',
                     'message' => 'A password is required'
                 )
