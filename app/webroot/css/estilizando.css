@@ -7,6 +7,10 @@ body {
     margin-top: 75px;
 }
 
+#posts {
+    background-color: rgb(187, 187, 187);
+}
+
 #menu {
     background-color: rgb(218, 218, 218);
     font-weight: 600;
@@ -19,4 +23,22 @@ body {
 
 #adduser {
     margin-top: 60px;
+}
+
+#abled {
+    color: green;
+    border: 1px solid green;
+    background-color: rgb(177, 255, 177);
+    border-radius: 20%;
+    padding: 2px 5px;
+    margin-left: 15px;
+}
+
+#disabled {
+    color: red;
+    border: 1px solid red;
+    background-color: rgb(255, 202, 202);
+    border-radius: 20%;
+    padding: 2px 5px;
+    margin-left: 15px;
 }

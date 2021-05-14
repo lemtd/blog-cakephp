@@ -64,11 +64,14 @@
         }
         
         public function login() {
-            if ($this->request->is('post')) {
-                if ($this->Auth->login()) {
-                    $this->redirect(array('action' => '../Posts/index'));
-                } else {
-                    $this->Flash->error(__('Invalid username or password, try again'));
+            if ($this->request->data) {
+                $this->User->set($this->request->data);
+                if ($this->request->is('post')) {
+                    if ($this->User->validates() && $this->Auth->login()) {
+                        $this->redirect(array('action' => '../Posts/index'));
+                    } else {
+                        $this->Flash->error(__('Invalid username or password, try again'));
+                    }
                 }
             }
         }

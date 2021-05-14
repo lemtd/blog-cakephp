@@ -3,6 +3,11 @@
     <?php echo $this->Form->create('Post');?>
     <?php echo $this->Form->input('title'); ?><br>
     <?php echo $this->Form->input('body', array('rows' => '3')); ?><br>
+    <?php echo $this->Form->input('status', array(
+                'options' => array('Disabled', 'Abled'),
+                'label' => false
+            )); 
+    ?><br><br>
     <?php echo $this->Form->end('Save Post'); ?><br><br>
     <?php echo $this->Html->link('Back', array('action' => '../Posts/index')); ?>
 </div>

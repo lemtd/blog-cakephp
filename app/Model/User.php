@@ -4,13 +4,15 @@
         public $validate = array(
             'username' => array(
                 'required' => array(
-                    'rule' => array('notEmpty'),
+                    'on' => 'create',
+                    'rule' => 'notBlank',
                     'message' => 'A username is required'
                 )
             ),
             'password' => array(
                 'required' => array(
-                    'rule' => array('notEmpty'),
+                    'on' => 'create',
+                    'rule' => 'notBlank',
                     'message' => 'A password is required'
                 )
             ),
