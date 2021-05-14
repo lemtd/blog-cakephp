@@ -6,7 +6,7 @@
     - Baixar e instalar o Cake;
     - Criar e configurar o banco de dados;
     - Criar a lógica da aplicação suficiente para listar, adicionar, editar e deletar posts do blog.
-    - Desenvolver a página visualmente, utilizando Bootstrap 3, para melhor interação com o usuário.
+    - Desenvolver a página visualmente, utilizando CSS e Bootstrap 3, para melhor interação com o usuário.
 
 - Este projeto opera junto com o Docker e Docker Compose para assim poder utilizar um servidor web rodando (Apache) juntamente com um servidor do banco de dados (PostgreSQL).
 
