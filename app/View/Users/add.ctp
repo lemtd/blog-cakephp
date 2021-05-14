@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="adduser">
     <div class="users form">
         <?php echo $this->Form->create('User');?>
             <fieldset>

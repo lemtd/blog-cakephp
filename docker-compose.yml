@@ -28,6 +28,8 @@ services:
     pgadmin:
         image: dpage/pgadmin4
         container_name: db-pgadmin
+        volumes:
+            - ./pgadmin:/var/lib/pgadmin
         ports:
             - "5712:80"
         environment:

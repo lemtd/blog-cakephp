@@ -10,6 +10,7 @@
 /dist
 /tags
 /pgdata
+/pgadmin
 *.mo
 
 # IDE and editor specific files #

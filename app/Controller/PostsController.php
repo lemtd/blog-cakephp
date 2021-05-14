@@ -4,7 +4,6 @@
         public $name = 'Posts';
 
         function index() {
-            $this->set('posts', $this->Post->find('all'));
             $search = $this->request->data('Properties.Search');
             $filter = $this->request->data('Properties.Filter');
             if($filter == NULL){
