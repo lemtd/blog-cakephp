@@ -42,3 +42,7 @@ body {
     padding: 2px 5px;
     margin-left: 15px;
 }
+
+#editbutton {
+    text-decoration: none;
+}

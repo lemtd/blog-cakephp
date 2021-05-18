@@ -20,7 +20,7 @@
                 'options' => array('Disabled', 'Abled'),
                 'empty' => 'All',
                 'label' => false
-            )); 
+            ));
         ?>
         <br>
 
@@ -50,7 +50,7 @@
             <?php if ($this->Session->read('Auth.User')) { ?>
                 <tr>
                     <td>
-                        <div data-toggle="collapse" data-target="#demo-<?php echo $i; ?>"><?php echo $post['Post']['title']; ?></div> 
+                        <div data-toggle="collapse" data-target="#demo-<?php echo $i; ?>"><?php echo $post['Post']['title']; ?></div>
                         <div id="demo-<?php echo $i; $i++; ?>" class="collapse">
                             <?php echo $post['Post']['body']; ?>
                         </div>
@@ -64,8 +64,10 @@
                         <?php } ?>
                     </td>
                     <td>
-                        <?php echo $this->Form->button('Edit', array('action' => 'edit', $post['Post']['id'], 'class' => 'btn btn-primary')); ?>
-                        <?php echo $this->Form->button('Delete', array('action' => 'delete', $post['Post']['id'], 'class' => 'btn btn-danger'),  array('confirm' => 'Are you sure?')); ?>
+                        <?php echo $this->Form->create('Actions', array('type' => 'post', 'class' => 'form-inline')); ?>
+						<button><a href="/Posts/edit/<?php echo $post['Post']['id']; ?>">Edit</a></button>
+						<button><a href="/Posts/delete/<?php echo $post['Post']['id']; ?>">Delete</a></button>
+                        <?php echo $this->Form->end(); ?>
                     </td>
                 <?php } else { ?>
                     <div class="panel panel-default">

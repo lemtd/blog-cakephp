@@ -1,2 +1,1 @@
-ALTER TABLE posts
-  ADD COLUMN status BOOLEAN DEFAULT TRUE;
+UPDATE posts SET status=FALSE WHERE title='teste';
