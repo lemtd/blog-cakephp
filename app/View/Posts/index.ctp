@@ -59,9 +59,9 @@
 
                     <td>
                         <?php if($post['Post']['status'] == TRUE) { ?>
-                            <?php echo 'Abled'; ?>
+                            <?php echo $this->Html->image('test-pass-icon.png', array('alt' => 'Abled')) ?>
                         <?php } else { ?>
-                            <?php echo 'Disabled'; ?>
+							<?php echo $this->Html->image('test-fail-icon.png', array('alt' => 'Disabled')) ?>
                         <?php } ?>
                     </td>
                     <td>
@@ -70,10 +70,12 @@
 						<button><a href="/Posts/delete/<?php echo $post['Post']['id']; ?>">Delete</a></button>
                         <?php echo $this->Form->end(); ?>
                     </td>
-                <?php } else { ?>
+                </tr>
+			<?php } else { ?>
+				<tr>
                     <div class="panel panel-default">
                         <?php if($post['Post']['status'] == TRUE) { ?>
-                            <div class="panel-heading" id="logout-header">
+                            <div class="panel-heading">
                                 <?php echo $post['Post']['title']; echo $this->Html->tag('span', 'Abled', array('id' => 'abled')); ?>
                             </div>
                             <div class="panel-body"><?php echo $post['Post']['body']; ?></div>
@@ -84,8 +86,8 @@
                             <div class="panel-body"><?php echo $post['Post']['body']; ?></div>
                         <?php } ?>
                     </div>
-                <?php } ?>
-            </tr>
+            	</tr>
+			<?php } ?>
         <?php endforeach; ?>
     </table>
 </div>

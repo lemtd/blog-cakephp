@@ -7,7 +7,7 @@ body {
 }
 
 #posts {
-    background-color: #e3f5fc;
+    background-color: #dedede;
 }
 
 #menu {
@@ -33,23 +33,29 @@ body {
 }
 
 #abled {
-    color: green;
-    border: 1px solid green;
-    background-color: rgb(177, 255, 177);
-    border-radius: 20%;
+    color: white;
+    background-color: green;
     padding: 2px 5px;
-    margin-left: 15px;
+	float: right;
 }
 
 #disabled {
-    color: red;
-    border: 1px solid red;
-    background-color: rgb(255, 202, 202);
-    border-radius: 20%;
+    color: white;
+    background-color: red;
     padding: 2px 5px;
-    margin-left: 15px;
+    float: right;
 }
 
 #editbutton {
     text-decoration: none;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #dedede;
+	color: #000000;
+	text-align: center;
 }
