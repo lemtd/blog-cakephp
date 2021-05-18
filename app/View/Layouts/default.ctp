@@ -5,8 +5,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!DOCTYPE html>
 <html>
 <?php echo $this->element('head'); ?>
+
 <body>
-	<nav class="navbar navbar-default" id="menu">
+	<nav class="navbar navbar-inverse" id="menu">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
 				<li><?php echo $this->Html->link('Home', array('action' => '../Posts/index', 'class' => 'active')); ?></li>

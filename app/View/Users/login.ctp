@@ -3,7 +3,7 @@
         <?php echo $this->Flash->render('auth'); ?>
         <?php echo $this->Form->create('User');?>
             <fieldset>
-                <legend><?php echo __('Please enter your username and password'); ?></legend>
+                <legend id="sms-login"><?php echo 'Please, enter your username and password'; ?></legend>
                 <?php echo $this->Form->input('username', array('required' => false, 'class' => 'container')); ?><br>
                 <?php echo $this->Form->input('password', array('required' => false, 'class' => 'container'));?>
             </fieldset><br>

@@ -10,18 +10,19 @@
                 "placeholder" => "Search",
                 'label'=>false,
                 'class' => 'form-control mr-sm-2',
+                'id' => 'caixa',
                 'type' => 'search',
                 'aria-label' => 'Search'
             ));
         ?>
-        <br>
-
         <?php echo $this->Form->input('Filter', array(
                 'options' => array('Disabled', 'Abled'),
                 'empty' => 'All',
-                'label' => false
+                'label' => false,
+                'id' => 'filter'
             ));
         ?>
+        <br>
         <br>
 
         <?php echo $this->Form->button('Submit', array(
