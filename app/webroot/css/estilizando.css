@@ -3,7 +3,9 @@ body {
 }
 
 #index {
+	position: center;
     margin-top: 55px;
+	z-index: -1;
 }
 
 #posts {
@@ -12,11 +14,15 @@ body {
 
 #menu {
     font-weight: 600;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100%;
 }
 
 #hello {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 #caixa {
