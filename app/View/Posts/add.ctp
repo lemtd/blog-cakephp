@@ -1,5 +1,5 @@
 <div class="container" id="add-post-box">
-    <?php echo $this->Form->create('Post', array('novalidate' => true));?>
+    <?php echo $this->Form->create('Post');?>
     <fieldset>
 		<legend id="add-post"><?php echo 'Add Post'; ?></legend><br>
 			<?php echo $this->Form->input('title', array('id' => 'title', 'between' => '<br>')); ?><br>

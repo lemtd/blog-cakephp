@@ -1,5 +1,5 @@
 <div class="container" id="edit-post-box">
-    <?php echo $this->Form->create('Post', array('novalidate' => true));?>
+    <?php echo $this->Form->create('Post');?>
     <fieldset>
 		<legend id="edit-post"><?php echo 'Edit Post'; ?></legend><br>
 			<?php echo $this->Form->input('title', array('id' => 'title', 'between' => '<br>')); ?><br>
