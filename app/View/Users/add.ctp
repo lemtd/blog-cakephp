@@ -1,16 +1,16 @@
 <div class="container" id="register">
-    <div class="users form">
-        <?php echo $this->Form->create('User');?>
-            <fieldset>
-                <legend><?php echo 'Add user'; ?></legend>
-                <?php echo $this->Form->input('username', array('required' => false)); ?><br>
-                <?php echo $this->Form->input('password', array('required' => false)); ?><br>
-                <?php echo $this->Form->input('role', array(
-                    'options' => array('admin' => 'Admin', 'author' => 'Author')
-                ));
-            ?>
-            </fieldset><br>
-        <?php echo $this->Form->end('Submit', array('formnovalidate' => true)); ?><br><br>
-        <?php echo $this->Html->link('Back', array('action' => '../Posts/index')); ?>
-    </div>
+	<?php echo $this->Form->create('User');?>
+		<fieldset>
+			<legend id="register-register"><?php echo 'Register'; ?></legend><br>
+			<?php echo $this->Form->input('username', array('required' => false, 'id' => 'username', 'between' => '<br>')); ?><br>
+			<?php echo $this->Form->input('password', array('required' => false, 'id' => 'password', 'between' => '<br>')); ?><br>
+			<?php echo $this->Form->input('role', array(
+				'options' => array('admin' => 'Admin', 'author' => 'Author'),
+				'id' => 'role',
+				 'between' => '<br>'
+			));
+			?>
+		</fieldset><br><br><br>
+	<button id="register-back"><?php echo $this->Html->link('Back', array('action' => '../Posts/index')); ?></button>
+	<div id="register-submit"><?php echo $this->Form->end('Register', array('formnovalidate' => true)); ?></div>
 </div>

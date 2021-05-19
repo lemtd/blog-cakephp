@@ -1,8 +1,8 @@
-<div class="container" id="hello">
+<div class="container" id="helloblogcakephp">
     <h1>Blog CakePHP: Hello!</h1>
 </div>
 
-<div class="container" id="index">
+<div class="container" id="index-search">
     <nav class="navbar navbar-light bg-light">
         <?php echo $this->Form->create('Properties', array('type' => 'post', 'class' => 'form-inline'));
             echo $this->Form->input('Search', array(
@@ -10,7 +10,7 @@
                 "placeholder" => "Search",
                 'label'=>false,
                 'class' => 'form-control mr-sm-2',
-                'id' => 'caixa',
+                'id' => 'search-box',
                 'type' => 'search',
                 'aria-label' => 'Search'
             ));
@@ -34,7 +34,7 @@
     </nav>
 </div>
 <br>
-<div class="container" id="posts">
+<div class="container" id="posts-box">
     <h2>POSTS</h2>
     <table class="table table-hover" id="table_container">
         <br><br>

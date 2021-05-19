@@ -1,13 +1,11 @@
 <div class="container" id="login">
-    <div class="users form">
         <?php //echo $this->Flash->render('auth'); ?>
         <?php echo $this->Form->create('User');?>
-            <fieldset id="sms-login">
-                <legend><?php echo 'Please, enter your username and password'; ?></legend>
-                <?php echo $this->Form->input('username', array('required' => false, 'class' => 'container')); ?><br>
-                <?php echo $this->Form->input('password', array('required' => false, 'class' => 'container'));?>
-            </fieldset><br>
-        <?php echo $this->Form->end(__('Login'));?><br><br>
-        <?php echo $this->Html->link('Back', array('action' => '../Posts/index')); ?>
-    </div>
+            <fieldset>
+                <legend id="login-login"><?php echo 'Login'; ?></legend><br>
+                <?php echo $this->Form->input('username', array('required' => false, 'id' => 'username', 'between' => '<br>')); ?><br>
+                <?php echo $this->Form->input('password', array('required' => false, 'id' => 'password', 'between' => '<br>'));?>
+            </fieldset><br><br><br>
+		<button id="login-back"><?php echo $this->Html->link('Back', array('action' => '../Posts/index')); ?></button>
+        <div id="login-submit"><?php echo $this->Form->end('Login');?></div><br><br>
 </div>

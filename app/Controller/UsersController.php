@@ -40,7 +40,7 @@
             		$this->User->create();
 					if ($this->User->save($this->request->data)) {
 						$this->Flash->success('The user has been saved');
-						$this->redirect(array('action' => 'index'));
+						$this->redirect(array('action' => '../Posts/index'));
 					} else {
 						$this->Flash->error('The user could not be saved. Please, try again.');
 					}

@@ -7,7 +7,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <?php echo $this->element('head'); ?>
 
 <body>
-	<nav class="navbar navbar-inverse" id="menu">
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="menu">
 		<div class="container-fluid">
 			<ul class="nav navbar-nav">
 				<li><?php echo $this->Html->link('Home', array('action' => '../Posts/index', 'class' => 'active')); ?></li>
@@ -28,15 +28,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 		<br><br><br><br>
 		<div class="container" id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'https://cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
+			<div id="script">
+				<?php echo $this->Html->link(
+						$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+						'https://cakephp.org/',
+						array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
+					);
+				?>
+				<p>
+					<?php echo $cakeVersion; ?>
+				</p>
+			</div>
 		</div>
 	</div>
 	<?php //echo $this->element('sql_dump'); ?>

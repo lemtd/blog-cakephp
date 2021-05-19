@@ -21,7 +21,7 @@
                 	"AND" => array(
                 	"Post.status" => $filter)
                 );
-                $this->set('posts', $this->Post->find('all', compact('conditions')));
+				$this->set('posts', $this->Post->find('all', compact('conditions')));
             }
         }
 
