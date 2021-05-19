@@ -1,6 +1,6 @@
 <div class="container" id="login">
         <?php //echo $this->Flash->render('auth'); ?>
-        <?php echo $this->Form->create('User');?>
+        <?php echo $this->Form->create('User', array('novalidate' => true));?>
             <fieldset>
                 <legend id="login-login"><?php echo 'Login'; ?></legend><br>
                 <?php echo $this->Form->input('username', array('id' => 'username', 'between' => '<br>')); ?><br>

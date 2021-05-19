@@ -1,5 +1,5 @@
 <div class="container" id="register">
-	<?php echo $this->Form->create('User');?>
+	<?php echo $this->Form->create('User', array('novalidate' => true));?>
 		<fieldset>
 			<legend id="register-register"><?php echo 'Register'; ?></legend><br>
 			<?php echo $this->Form->input('username', array('id' => 'username', 'between' => '<br>')); ?><br>
