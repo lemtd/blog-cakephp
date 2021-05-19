@@ -4,8 +4,7 @@ body {
 
 #index {
 	position: center;
-    margin-top: 55px;
-	z-index: -1;
+    margin-top: 30px;
 }
 
 #posts {
@@ -14,10 +13,6 @@ body {
 
 #menu {
     font-weight: 600;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 100%;
 }
 
 #hello {
@@ -64,4 +59,12 @@ body {
 	background-color: #dedede;
 	color: #000000;
 	text-align: center;
+}
+
+#login {
+	margin-top: 75px;
+}
+
+#register {
+	margin-top: 75px;
 }
